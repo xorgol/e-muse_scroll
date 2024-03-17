@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Based on https://sbcode.net/threejs/animate-on-scroll/ -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="xorgol" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>E-MUSE Scroll and Bake</title>
+    <style>
+      body {
+        margin: 0px;
+        font-family: Montserrat, monospace;
+        color: black;
+      }
+
+      main {
+        max-width: 50vw;
+        height: 900vh;
+        top: 0;
+        position: absolute;
+        justify-content: center;
+        text-align: left;
+        pointer-events: none;
+        font-size: 2vh;
+        margin-left: 1em;
+      }
+
+      section {
+        min-height: 100vh;
+        padding: 20px;
+        font-size: 16px;
+        max-width: 40rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #003594;
+      }
+    </style>
+    <base href="." />
+  </head>
+  <body>
+    <!-- <h1>BCC Innovation Festival 2024</h1> -->
+    <section>
+      <!-- <h2>Il programma</h2> -->
+      <h3>Candida la tua idea</h3>
+      <p>La partecipazione è gratuita!</p>
+      <p>
+        Registrati e compila il form con i tuoi dati per richiedere la
+        partecipazione.
+      </p>
+    </section>
+    <section>
+      <h3>Selezione delle idee</h3>
+      <p>
+        I candidati partecipano a un contest online con un Elevator Pitch, cioè
+        l’esposizione della propria idea, realizzato con l’aiuto di un servizio
+        di consulenza dedicato. <br />
+        Un team di esperti, coadiuvato dal Comitato Scientifico e con il
+        supporto di Knowledge Institute, seleziona i Champions in base alla
+      </p>
+      <ul>
+        <li>
+          chiarezza e completezza delle informazioni fornite nell'application
+          form;
+        </li>
+        <li>esposizione dell’idea imprenditoriale nell’elevator pitch;</li>
+        <li>parere del Comitato Scientifico del Festival;</li>
+        <li>tempistiche di adesione.</li>
+      </ul>
+       
+      <p>I migliori passeranno alla fase successiva di Road to Festival. </p>
+    </section>
+
+    <section>
+      <h3>Road to festival</h3>
+      <p>
+        I Champion selezionati lavorano a una presentazione con cui presentarsi
+        a una platea qualificata in occasione del Festival Day.
+        <br />Per prepararsi ricevono percorsi di formazione erogati da una
+        faculty di elevato standing proveniente dall’impresa e dall’accademia e
+        mentoring dai membri del Comitato Scientifico, esperti provenienti da
+        diverse aree come corporate, impresa, istituzioni e accademia. <br />Al
+        termine del Road to Festival, saranno selezionati i Champion migliori
+        che passeranno alla fase successiva. 
+      </p>
+    </section>
+
+    <section>
+      <h3>Festival Day</h3>
+      <p>
+        Una giornata dedicata ai Champion selezionati, che presenteranno il loro
+        progetto davanti a una platea di stakeholder. I migliori progetti
+        saranno premiati, accedendo così alle fasi successive
+      </p>
+    </section>
+
+    <section>
+      <h3>Growing up</h3>
+      <p>
+        I Champion vincitori accedono ad una fase di confronto con i vari
+        partner dell’iniziativa accompagnati da tutor dell’Innovation Festival e
+        avranno l'opportunità di accedere a servizi di accompagnamento nello
+        sviluppo dell'idea, erogati da soggetti qualificati come incubatori e
+        acceleratori certificati su tutto il territorio nazionale che, in
+        modalità ibrida, li supporteranno nel consolidamento e
+        nell'implementazione dei loro piani di crescita.
+      </p>
+    </section>
+
+    <section>
+      <h3>Investor Day</h3>
+      <p>
+        I Champion, al termine della fase di accompagnamento nella crescita,
+        parteciperanno a workshop dedicati per migliorare la capacità attrattiva
+        dei loro pitch in ottica di fundraising.  Parteciperanno poi
+        all’Investor Day, dedicato alla presentazione delle idee ai potenziali
+        investitori del mercato dei capitali. L’evento in presenza costituirà
+        una preziosa occasione per reperire le risorse necessarie per avviare le
+        attività di go to market.  
+      </p>
+    </section>
+
+    <section>
+      <h3>International Networking</h3>
+      <p>
+        I Champion vincitori saranno messi in relazione con realtà estere al
+        fine di facilitare una proiezione internazionale delle loro idee 
+      </p>
+    </section>
+
+    <section>
+      <h2 id="student">Innovation for student</h2>
+      <h3>Sei interessato a una borsa di studio nel mondo dell’innovazione?</h3>
+      <p>
+        La partecipazione è gratuita!  Registrati, inserisci il tuo CV e una
+        lettera di presentazione per richiedere la partecipazione.
+      </p>
+      <h3>Selezione dei Talent</h3>
+      <p>
+        I candidati verranno valutati dalle Università/Partner di riferimento
+        del Festival per accedere alle fasi successive. 
+      </p>
+    </section>
+
+    <section>
+      <h3>Road to festival</h3>
+      <p>
+        Durante questa fase, i Talent selezionati ricevono momenti di formazione
+        volti alla costruzione di una presentazione strutturata di un progetto,
+        sotto forma di un "pitch" sintetico. 
+      </p>
+    </section>
+
+    <section>
+      <h3>Festival Day</h3>
+      <p>
+        I migliori Talent sono premiati con borse di studio messe a disposizione
+        in collaborazione con i Partner dell'Innovation Festival.  
+      </p>
+    </section>
+    <section>
+      <h3>Borse di studio</h3>
+      <p>
+        I "Talent" vincitori avranno accesso a borse di studio per partecipare a
+        programmi di formazione avanzati con focus sull'innovazione presso
+        prestigiose realtà nazionali partner del Festival. 
+      </p>
+    </section>
+  </body>
+</html>

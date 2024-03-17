@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="it" id="scrollable">
+  <!-- Based on https://sbcode.net/threejs/animate-on-scroll/ -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="xorgol" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>E-MUSE Scroll and Bake</title>
+    <link href="../scroll.css" rel="stylesheet" />
+
+    <base href="." />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./build/three.module.js",
+          "three/addons/": "./node_modules/three/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <span id="scrollProgress"></span>
+
+      <a href="#first" style="color: inherit; text-decoration: none"
+        ><div class="scrollButton">Fai scroll per continuare</div></a
+      >
+
+      <section>
+        <div class="card" id="first" style="scroll-behavior: smooth">
+          <h2>BCC Innovation Festival 2024</h2>
+          <h3>L'Agenda e gli obiettivi ONU</h3>
+          <p>Hai un'idea imprenditoriale innovativa?</p>
+          <p>
+            Se è coerente con i principi di sviluppo sostenibile identificati
+            dall'<a href="https://unric.org/it/agenda-2030/" target="_blank"
+              >Agenda ONU 2030</a
+            >, candidati per partecipare al BCC Innovation Festival!
+          </p>
+          <p>
+            Sei uno studente nell'ambito dell'innovazione? Presentati e avrai la
+            possibilità di vincere una borsa di studio.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="card">
+          <h2>Candida la tua idea</h2>
+          <h3>L’inizio del viaggio di Start-up e Studenti</h3>
+          <p>
+            In questa prima fase gli aspiranti Champion e gli studenti stanno
+            già candidando le proprie idee tramite la compilazione di un
+            application form scaricabile dal sito.
+          </p>
+          <p>
+            In questo momento il team del BCC Innovation Festival sta già
+            raccogliendo le proposte dei candidati. Se hai un’idea, registrati,
+            compila il form e potrai essere il nuovo volto dell’innovazione.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="card">
+          <h2>Selezione delle idee</h2>
+          <h3>Elevator Pitch</h3>
+          <p>
+            I nostri partner selezionano le idee imprenditoriali e gli studenti
+            meritevoli che continueranno il percorso. <br />Le idee migliori
+            passano alla fase successiva di Road to Festival in seguito al
+            giudizio del Comitato Scientifico e
+            <a href="https://www.knowledgeinstitute.it/" target="_blank"
+              >Knowledge Institute</a
+            >
+            secondo i criteri di:
+          </p>
+          <ul>
+            <li>chiarezza e completezza nei campi dell'application form</li>
+            <li>esposizione dell’idea imprenditoriale nell’elevator pitch</li>
+            <li>tempistiche di adesione</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2>Road to festival</h2>
+          <h3>Mentorship e Formazione</h3>
+          <p>
+            I Champions, selezionati tra le startup, lavorano al pitch della
+            loro idea imprenditoriale, tramite un percorso di formazione svolto
+            con partner d'eccezione e la consulenza del Comitato Scientifico. I
+            Talent, migliori tra gli studenti, svolgono un percorso di
+            formazione e mentorship.
+          </p>
+        </div>
+      </section>
+
+      <section class="highlight">
+        <div class="card">
+          <h2>Festival Day</h2>
+          <h3>La premiazione delle idee e del talento</h3>
+          <p>
+            I Talent selezionati saranno premiati con borse di studio nel campo
+            dell'innovazione.<br />
+            I Champion migliori vengono premiati e hanno accesso al percorso di
+            growing up, all'Investor Day e all'International Networking, ma
+            anche a un processo facilitato per l'accesso al credito agevolato
+            (previsto dalla normativa italiana sulle startup).
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2>Percorso di growing up</h2>
+          <h3>Mentoring, academy e borse di studio</h3>
+          <p>
+            Per il percorso studenti, i Talent vincitori del Festival Day hanno
+            accesso a borse di studio per partecipare a programmi di formazione
+            avanzati con focus sull'innovazione presso prestigiose realtà
+            nazionali partner del Festival, tra i principali
+            <a href="https://www.unicatt.it/" target="_blank"
+              >Università Cattolica</a
+            >
+            e <a href="" target="_blank">Napoli Fintech Lab</a>. <br />I
+            Champion vincitori dell’Innovation for startup iniziano una fase di
+            confronto con i partner dell’iniziativa, tra cui
+            <a href="https://www.unibocconi.eu/" target="_blank"
+              >Università Bocconi</a
+            >​, <a href="https://www.innovup.net/" target="_blank">InnovUp</a>,
+            <a href="https://www.ita-airways.com/en_us/" target="_blank">ITA</a>
+            e
+            <a href="https://www.bain.com/offices/milan/" target="_blank"
+              >Bain</a
+            >. Hanno così l'opportunità di accedere a corsi di formazione
+            (academy), servizi di accompagnamento nello sviluppo dell'idea e di
+            consolidamento dei loro piani di crescita.  
+          </p>
+        </div>
+      </section>
+
+      <section class="highlight">
+        <div class="card">
+          <h2>Investor Day & International Networking</h2>
+          <h3>Il punto di arrivo e il Go to Market</h3>
+          <p>
+            I Champion, al termine della fase di accompagnamento nella crescita,
+            partecipano all’Investor Day, dedicato alla presentazione delle idee
+            ai potenziali investitori del mercato dei capitali anche a livello
+            internazionale. L’evento in presenza costituirà una preziosa
+            occasione per reperire le risorse necessarie per avviare le attività
+            di go to market. <br />
+            Durante l'International networking i Champion si confrontano con
+            partner internazionali per valutare percorsi sui mercati esteri.
+          </p>
+        </div>
+      </section>
+
+      <a
+        href="#first"
+        style="
+          color: inherit;
+          text-decoration: none;
+          position: sticky;
+          margin-top: 100vh;
+          z-index: 99;
+          display: block;
+        "
+        ><div class="scrollButton">Torna all'inizio</div></a
+      >
+    </main>
+    <script type="module">
+      import * as THREE from "three";
+      import { PMREMGenerator } from "three";
+      import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+      import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+      import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
+      import { EXRLoader } from "three/addons/loaders/EXRLoader.js";
+      import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+      import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+
+      const scene = new THREE.Scene({ alpha: true });
+      // scene.background = null;
+      const textureLoader = new RGBELoader();
+      const texture = textureLoader.load("venice_sunset_1k.exr", (texture) => {
+        texture.mapping = THREE.EquirectangularReflectionMapping;
+        texture.colorSpace = THREE.SRGBColorSpace;
+        scene.background = textureLoader;
+      });
+
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        1,
+        1000
+      );
+      // camera.position.set(2, 4, 2);
+      camera.rotation.y = -1.5 * Math.PI;
+      const size = 10;
+      const divisions = 10;
+
+      const gridHelper = new THREE.GridHelper(size, divisions);
+      // scene.add(gridHelper);
+
+      var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setClearColor(0x000000, 0);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      var pmremGenerator = new PMREMGenerator(renderer);
+      //pmremGenerator.fromScene(new RoomEnvironment());
+      pmremGenerator.compileEquirectangularShader();
+
+      var neutralEnvironment = pmremGenerator.fromScene(
+        new RoomEnvironment()
+      ).texture;
+
+      // const RGBELoader = (await import(urls.getURL("RGBELoader"))).RGBELoader;
+      var envMap = getCubeMapTexture(neutralEnvironment);
+      scene.environment = envMap;
+
+      texture.dispose();
+      pmremGenerator.dispose();
+
+      function getCubeMapTexture(environment) {
+        const { id, path } = environment;
+
+        // neutral (THREE.RoomEnvironment)
+        if (id === "neutral") {
+          return Promise.resolve({ envMap: neutralEnvironment });
+        }
+
+        // none
+        if (id === "") {
+          return Promise.resolve({ envMap: null });
+        }
+
+        return new Promise((resolve, reject) => {
+          new EXRLoader().load(
+            path,
+            (texture) => {
+              const envMap =
+                pmremGenerator.fromEquirectangular(texture).texture;
+              pmremGenerator.dispose();
+
+              resolve({ envMap });
+            },
+            undefined,
+            reject
+          );
+        });
+      }
+
+      const geometry = new THREE.BoxGeometry();
+      const material = new THREE.MeshBasicMaterial({
+        color: 0x000000,
+        wireframe: false,
+        opacity: 0.0,
+      });
+      // const cube = new THREE.Mesh(geometry, material);
+      // scene.add(cube);
+      // cube.position.set(0, 1.4, 0);
+
+      const light = new THREE.HemisphereLight(0xffffbb, 0xffffff, 2);
+      scene.add(light);
+      light.castShadow = true;
+      light.shadowMapWidth = light.shadowMapHeight = 1024 * 2;
+
+      var d = 300;
+
+      light.shadowCameraLeft = -d;
+      light.shadowCameraRight = d;
+      light.shadowCameraTop = d;
+      light.shadowCameraBottom = -d;
+
+      light.shadowCameraFar = 3500;
+      light.shadowBias = -0.0001;
+      light.shadowDarkness = 0.35;
+
+      // const rectLight = new THREE.RectAreaLight(0xffffff, 1, 5, 5);
+      // rectLight.position.set(2, 1, 2);
+      // rectLight.lookAt(5, 1, 5);
+      // scene.add(rectLight);
+
+      const plight = new THREE.PointLight(0xffffff, 8, 0, 1);
+      plight.position.set(4.3, 2, 4.3);
+      scene.add(plight);
+
+      const customLight = new THREE.PointLight(0xffffff, 6);
+      customLight.position.set(8, 5, 4);
+      const sphereSize = 1;
+      const pointLightHelper = new THREE.PointLightHelper(plight, sphereSize);
+      // scene.add(pointLightHelper);
+      scene.add(customLight);
+
+      const backLight = new THREE.PointLight(0xffffff, 6);
+      backLight.position.set(2, 3, 6);
+
+      const backLightHelper = new THREE.PointLightHelper(backLight, sphereSize);
+      // scene.add(backLightHelper);
+      scene.add(backLight);
+
+      const frontLight = new THREE.PointLight(0xffffff, 6);
+      frontLight.position.set(5, 1, 3);
+
+      const frontLightHelper = new THREE.PointLightHelper(
+        frontLight,
+        sphereSize
+      );
+      // scene.add(frontLightHelper);
+      scene.add(frontLight);
+
+      const dracoLoader = new DRACOLoader();
+      dracoLoader.setDecoderPath("jsm/libs/draco/gltf/");
+
+      const loader = new GLTFLoader();
+      loader.setDRACOLoader(dracoLoader);
+      var model;
+      loader.load("PENSATORE_baking.glb", function (gltf) {
+        model = gltf.scene;
+        model.position.set(0, -0.3, 0);
+        model.scale.set(0.5, 0.5, 0.5);
+        scene.add(model);
+        model.visible = false;
+      });
+
+      var map = new GLTFLoader();
+      loader.load("BCCIF24-DEF-cerchio.glb", function (gltf) {
+        map = gltf.scene;
+        map.position.set(-1, -4, 0);
+        // map.rotation.y = Math.PI;
+        map.rotation.y = -1.5 * Math.PI;
+        map.scale.set(1, 1, 1);
+        scene.add(map);
+      });
+
+      window.addEventListener("resize", onWindowResize, false);
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        render();
+      }
+
+      /* Linear Interpolation
+       * lerp(min, max, ratio)
+       * eg,
+       * lerp(20, 60, .5)) = 40
+       * lerp(-20, 60, .5)) = 20
+       * lerp(20, 60, .75)) = 50
+       * lerp(-20, -10, .1)) = -.19
+       */
+      function lerp(x, y, a) {
+        return (1 - a) * x + a * y;
+      }
+
+      // Used to fit the lerps to start and end at specific scrolling percentages
+      function scalePercent(start, end) {
+        return (scrollPercent - start) / (end - start);
+      }
+
+      const animationScripts = [];
+
+      animationScripts.push({
+        start: 0,
+        end: 20,
+        func: () => {
+          if (model) {
+            model.position.x = lerp(-2, -21, scalePercent(0, 20));
+            model.position.y = lerp(20, 0, scalePercent(0, 20));
+            model.position.z = lerp(0, 16, scalePercent(0, 20));
+
+            camera.position.set(
+              model.position.x + 4,
+              model.position.y + 1.2,
+              model.position.z
+            );
+          }
+        },
+      });
+
+      animationScripts.push({
+        start: 21,
+        end: 100,
+        func: () => {
+          if (model) {
+            model.position.x = lerp(-21, -85, scalePercent(20, 100));
+            model.position.y = lerp(0, 3, scalePercent(20, 100));
+            model.position.z = lerp(16, 18, scalePercent(20, 100));
+
+            camera.position.set(
+              model.position.x + 4,
+              model.position.y + 1.2,
+              model.position.z
+            );
+          }
+        },
+      });
+
+      function playScrollAnimations() {
+        animationScripts.forEach((a) => {
+          if (scrollPercent >= a.start && scrollPercent < a.end) {
+            a.func();
+          }
+        });
+      }
+
+      let scrollPercent = 0;
+
+      document.body.onscroll = () => {
+        //calculate the current scroll progress as a percentage
+        scrollPercent =
+          ((document.documentElement.scrollTop || document.body.scrollTop) /
+            ((document.documentElement.scrollHeight ||
+              document.body.scrollHeight) -
+              document.documentElement.clientHeight)) *
+          100;
+        document.getElementById("scrollProgress").innerText =
+          "Scroll Progress : " + scrollPercent.toFixed(2);
+      };
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        playScrollAnimations();
+
+        render();
+      }
+
+      function render() {
+        renderer.render(scene, camera);
+      }
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      animate();
+    </script>
+  </body>
+</html>
