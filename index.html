@@ -15,17 +15,17 @@
     <link href="scroll.css" rel="stylesheet" />
 
     <base href="." />
-    <!-- <script type="importmap">
+    <script type="importmap">
       {
         "imports": {
           "three": "./build/three.module.js",
           "three/addons/": "./node_modules/three/examples/jsm/"
         }
       }
-    </script> -->
-    <script type="module" src="https://cdn.skypack.dev/three@0.129.0/build/three.module.js"></script>
+    </script>
+    <!-- <script type="module" src="https://cdn.skypack.dev/three@0.129.0/build/three.module.js"></script>
     <script type="module" src="https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js"></script>
-    <script type="module" src="https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/DRACOLoader.js"></script>
+    <script type="module" src="https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/DRACOLoader.js"></script> -->
 
   </head>
   <body>
@@ -202,9 +202,9 @@
       > -->
     </main>
     <script type="module">
-      import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
-      import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
-      import { DRACOLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/DRACOLoader.js";
+            import * as THREE from "three";
+      import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+      import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
       // import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
       let mixer,
@@ -246,10 +246,10 @@
       const light = new THREE.HemisphereLight(0xffffbb, 0xffffff, 1);
       scene.add(light);
 
-      // const rectLight = new THREE.RectAreaLight(0xffffff, 1, 5, 5);
-      // rectLight.position.set(2, 1, 2);
-      // rectLight.lookAt(5, 1, 5);
-      // scene.add(rectLight);
+      const rectLight = new THREE.RectAreaLight(0xffffff, 1, 5, 5);
+      rectLight.position.set(2, 1, 2);
+      rectLight.lookAt(5, 1, 5);
+      scene.add(rectLight);
 
       const plight = new THREE.PointLight(0xffffff, 8, 0, 1);
       plight.position.set(0.2, 2, 0.2);
@@ -285,7 +285,7 @@
       const loader = new GLTFLoader();
       loader.setDRACOLoader(dracoLoader);
       var model;
-      loader.load("PENSATORE_baking_metal06.glb", function (gltf) {
+      loader.load("PENSATORE_baking.glb", function (gltf) {
         model = gltf.scene;
         model.position.set(0, -0.3, 0);
         model.scale.set(0.5, 0.5, 0.5);
